@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  tileserver:
+    image: maptiler/tileserver-gl
+    ports:
+      - "8080:${PORT}"
+    volumes:
+      - "${FILESYSTEM}:/data"
+    restart: always
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://tileserver:8080" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5

@@ -1,0 +1,13 @@
+{
+  "options": {
+    "paths": {
+    }
+  },
+  "styles": {
+  },
+  "data": {
+    "example": {
+      "mbtiles": "example.mbtiles"
+    }
+  }
+}
